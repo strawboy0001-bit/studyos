@@ -64,31 +64,31 @@ export default function LoginPage() {
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center space-y-2">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20 ring-1 ring-white/20 group-hover:scale-105 transition-transform">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-500 text-white shadow-md shadow-blue-500/20 ring-1 ring-white/20 group-hover:scale-105 transition-transform">
               <BrainCircuit className="h-5 w-5" />
             </div>
             <span className="text-2xl font-black tracking-tight text-foreground">
-              StudyOS
+              Notic
             </span>
           </Link>
           <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-            Welcome back to StudyOS
+            Welcome to Notic
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground">
-            Sign in to access your personalized academic workspace
+            Sign in to access your beautiful academic workspace
           </p>
         </div>
 
         {/* Demo Persona Quick Fill Banner */}
-        <Card className="border-indigo-500/30 bg-indigo-500/10 p-4 space-y-3 text-left">
+        <Card className="border-blue-400/30 bg-blue-500/10 p-4 space-y-3 text-left shadow-sm">
           <div className="flex items-start gap-2.5">
-            <Sparkles className="h-4 w-4 text-indigo-400 shrink-0 mt-0.5" />
+            <Sparkles className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
             <div>
-              <p className="text-xs font-bold text-indigo-300">
-                Hackathon / Evaluation Quick Access
+              <p className="text-xs font-bold text-blue-600 dark:text-blue-300">
+                Quick Access
               </p>
-              <p className="text-[11px] text-muted-foreground leading-relaxed">
-                Test immediately as Surya (BCA Sem 1 Demo Student with seeded subjects &amp; priority items).
+              <p className="text-[11px] text-muted-foreground leading-relaxed mt-0.5">
+                Test immediately as Surya (Demo Student with seeded subjects &amp; priority items).
               </p>
             </div>
           </div>
@@ -97,16 +97,16 @@ export default function LoginPage() {
             variant="outline"
             size="sm"
             onClick={handleDemoFill}
-            className="w-full text-xs font-semibold border-indigo-500/40 text-indigo-200 hover:bg-indigo-500/20"
+            className="w-full text-xs font-semibold border-blue-400/40 text-blue-600 dark:text-blue-300 hover:bg-blue-500/20"
           >
             Launch as Demo Student
           </Button>
         </Card>
 
         {/* Main Login Form */}
-        <Card className="p-6 sm:p-8 space-y-5 border-border/80 bg-card/90 shadow-xl">
+        <Card className="p-6 sm:p-8 space-y-5 border-border/50 bg-card/80 backdrop-blur-md shadow-xl">
           {serverError && (
-            <div className="flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-xs text-destructive">
+            <div className="flex items-start gap-2 rounded-xl border border-destructive/30 bg-destructive/10 p-3 text-xs text-destructive">
               <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
               <span>{serverError}</span>
             </div>

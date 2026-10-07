@@ -1,77 +1,74 @@
 @import "tailwindcss";
 
 @layer base {
-  :root {
-    --background: 224 71% 4%;
-    --foreground: 210 40% 98%;
+  :root, .light {
+    /* Daytime Sky Theme (Your Name Light Mode) */
+    --background: 210 50% 98%;
+    --foreground: 220 50% 15%;
 
-    --card: 224 71% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 15%;
 
-    --popover: 224 71% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 15%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 14%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 200 80% 92%;
+    --secondary-foreground: 220 50% 15%;
 
-    --muted: 217.2 32.6% 12%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 20% 45%;
 
-    --accent: 217.2 32.6% 16%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 340 80% 85%;
+    --accent-foreground: 340 80% 20%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 16%;
-    --input: 217.2 32.6% 16%;
-    --ring: 224.3 76.3% 48%;
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 210 100% 60%;
 
     --radius: 0.75rem;
 
-    /* Semantic Priority Colors */
-    --priority-high: 0 84.2% 60.2%;
-    --priority-medium: 38 92% 50%;
-    --priority-low: 142.1 70.6% 45.3%;
-
-    /* StudyOS Brand Accent */
-    --brand-cyan: 189 94% 53%;
-    --brand-indigo: 239 84% 67%;
-    --brand-amber: 38 92% 50%;
-    --brand-emerald: 158 64% 52%;
+    /* Theme Accents */
+    --brand-cyan: 195 90% 60%;
+    --brand-indigo: 230 80% 65%;
+    --brand-amber: 40 100% 65%;
+    --brand-emerald: 145 70% 50%;
   }
 
-  .light {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+  .dark {
+    /* Starry Night Theme (Your Name Dark Mode) */
+    --background: 225 60% 10%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 225 50% 15%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 225 50% 15%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 93%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 40% 25%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 40% 20%;
+    --muted-foreground: 215 20% 75%;
 
-    --accent: 210 40% 93%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 80% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 63% 40%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --border: 220 40% 25%;
+    --input: 220 40% 25%;
+    --ring: 210 100% 65%;
   }
 }
 
@@ -96,10 +93,6 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  --color-priority-high: hsl(var(--priority-high));
-  --color-priority-medium: hsl(var(--priority-medium));
-  --color-priority-low: hsl(var(--priority-low));
-
   --color-brand-cyan: hsl(var(--brand-cyan));
   --color-brand-indigo: hsl(var(--brand-indigo));
   --color-brand-amber: hsl(var(--brand-amber));
@@ -109,6 +102,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+  --radius-full: 9999px;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -117,7 +116,7 @@
   }
 
   html {
-    color-scheme: dark;
+    color-scheme: light dark;
   }
 
   body {
@@ -127,15 +126,22 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-image: radial-gradient(circle at 15% 50%, hsl(var(--brand-cyan) / 0.05), transparent 25%),
+                      radial-gradient(circle at 85% 30%, hsl(var(--accent) / 0.05), transparent 25%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
   }
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -148,17 +154,19 @@
   background: hsl(var(--muted-foreground) / 0.45);
 }
 
-/* StudyOS Focus Glow */
+/* Beautiful Focus Glow */
 .focus-glow:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--primary) / 0.6);
 }
 
 /* Card Glow Effect */
 .card-hover-effect {
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
 }
 .card-hover-effect:hover {
-  border-color: hsl(var(--primary) / 0.4);
-  transform: translateY(-1px);
+  border-color: hsl(var(--primary) / 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05), 0 0 15px 0 hsl(var(--primary) / 0.1);
 }
